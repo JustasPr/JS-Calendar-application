@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial;
+}
+body {
+    background-color: #1a1919;
+}
+.container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.calendar {
+    height: auto;
+    overflow: hidden;
+    border-radius: 7px;
+    justify-content: center;
+    background-color: #2a3632;
+}
+.calendar__header {
+    background-color: #4287f5;
+    text-align: center;
+    padding: 10px 0;
+    color: #fff;
+}
+.calendar__weekdays {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(7, 14%);
+    justify-content: center;
+}
+.calendar__weekdays p {
+    color: #fff;
+    width: 100%;
+    text-align: left;
+    margin-left: 15px;
+}
+.calendar__days {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(7, 100px);
+    gap: 5px;
+    margin: 10px 0 0 20px;
+}
+.calendar__days div {
+    width: 100%;
+    height: 80px;
+    color: #fff;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.event__handling{
+    margin-left: 10px;
+    height: 600px;
+    width: 300px;
+    text-align: center;
+    background-color: #2a3632;
+    height: auto;
+    border-radius: 7px;
+    overflow: auto;
+}
+form {
+    margin-top: 20px;
+}
+.event__handling p {
+    text-align: left;
+    margin-left: 20px;
+    font-size: 12px;
+    color: #fff;
+}
+.event__handling input, #event_type, #descr {
+    border-radius: 5px;
+    padding: 5px;
+    width: 250px;
+    margin: 10px 0;
+    border: 2px solid #4287f5;
+}
+textarea:focus, input:focus, #event_type{
+    outline: none;
+}
+#addEvent, #remove_task {
+    width: 250px;
+    padding: 10px;
+    color: #fff;
+    background-color: #4287f5;
+}
+#remove_task {
+    margin-top: 20px;
+}
+/* blue - meeting, red - call, green - out of office */
+.day__task {
+    cursor: pointer;
+    color: #fff;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 11px;
+    word-wrap: break-word;
+}
+.meeting {
+    background-color: blueviolet;
+}
+.call {
+    background-color: red;
+}
+.outofoffice {
+    background-color: green;
+}
+.task__box {
+    margin-left: 10px;
+    width: 300px;
+    text-align: center;
+    background-color: #2a3632;
+    border-radius: 7px;
+    overflow: auto;
+    display: none;
+}
+.task p {
+    padding: 0 10px;
+    text-align: left;
+    color: #fff;
+    font-size: 15px;
+    font-weight: lighter;
+    margin-top: 10px;
+}
+button {
+    cursor: pointer;
+}

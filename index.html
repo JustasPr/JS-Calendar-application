@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Calendar</title>
+</head>
+<body>
+    <div class="container">
+        <div class="calendar">
+            <div class="calendar__header">
+                <p>Current Date</p>
+                <h2 class="liveTime"></h2>
+            </div>
+            <div class="calendar__weekdays">
+                <p>Mon</p>
+                <p>Tue</p>
+                <p>Wed</p>
+                <p>Thu</p>
+                <p>Fri</p>
+                <p>Sat</p>
+                <p>Sun</p>
+            </div>
+            <div class="calendar__days">
+                <!--<div>1
+                    <span class="day__task meeting">Brush teethaasdasdasd</span>
+                </div>-->
+            </div>
+        </div>
+        <div class="event__handling">
+            <div class="calendar__header">
+                <h2>Add Task</h2>
+                <p>Click on task in calendar to display information.</p>
+            </div>
+            <form>
+                <p>Task name:</p>
+                <input id="event_name" type="text" maxlength="50" placeholder="Task" required>
+                <p>Select Date:</p>
+                <input id="event_day" type="date" required>
+                <p>Start Time Date:</p>
+                <input id="startTime" type="datetime-local" required>
+                <p>End Time Date:</p>
+                <input id="endTime" type="datetime-local" required>
+                <p>Select Type:</p>
+                <select id="event_type" name="event_type" required>
+                    <option value="Meeting">Meeting</option>
+                    <option value="Call">Call</option>
+                    <option value="Out of Office">Out of Office</option>
+                </select>
+                <p>Description:</p>
+                <textarea id="descr" name="description" rows="5" cols="30" placeholder="Description (optional)"></textarea>
+            </form>
+            <button id="addEvent" onClick="return submitForm();">add task</button>
+        </div>
+        <div class="task__box">
+            <div class="task">
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
