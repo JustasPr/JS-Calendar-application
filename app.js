@@ -42,7 +42,7 @@ const renderCalendar = (month, year) => {
                 {
                     taskDiv.innerHTML += `${i - firstWeekDay}
                     <span onClick="taskDescription('${taskForDay.date}')"class="day__task outofoffice">${taskForDay.title}</span>`;
-                } else if (taskForDay.eType === 'meeting') {
+                } else if (taskForDay.eType === 'Meeting') {
                     taskDiv.innerHTML += `${i - firstWeekDay}
                     <span onClick="taskDescription('${taskForDay.date}')"class="day__task meeting">${taskForDay.title}</span>`;
                 } else {
