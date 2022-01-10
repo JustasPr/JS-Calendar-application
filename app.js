@@ -88,6 +88,8 @@ const submitForm = () => {
     }
 }
 const createTask = (name, date, sDate, eDate, type, descr) => {
+    sDate = sDate.replace("T", " ");
+    eDate = eDate.replace("T", " ");
     let task = {
         date: date,
         title: name,
@@ -96,8 +98,6 @@ const createTask = (name, date, sDate, eDate, type, descr) => {
         eType: type,
         description: descr
     };
-    sDate = sDate.replace("T", " ");
-    eDate = eDate.replace("T", " ");
     tasks.push(task);
     sessionStorage.setItem('Tasks', JSON.stringify(tasks));
     renderCalendar(currentMonth, currentYear);
